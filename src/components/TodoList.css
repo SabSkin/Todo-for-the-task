@@ -1,0 +1,117 @@
+.todo-list {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list__input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.todo-list__input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todo-list__add-btn {
+  width: 20%;
+  padding: 8px;
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-list__tasks {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list__task {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-list__checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-list__checkbox input {
+  display: none;
+}
+
+.todo-list__checkbox-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+}
+
+.todo-list__checkbox-icon.completed {
+  background-color: #4caf50;
+}
+
+.todo-list__checkbox-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.todo-list__checkbox input:checked + .todo-list__checkbox-icon::after {
+  visibility: visible;
+}
+
+.todo-list__task-text {
+  flex-grow: 1;
+}
+
+.todo-list__task-text.completed {
+  text-decoration: line-through;
+  color: #9e9e9e;
+}
+
+.todo-list__filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.todo-list__filter-btn,
+.todo-list__clear-btn {
+  padding: 8px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.todo-list__filter-btn:hover,
+.todo-list__clear-btn:hover {
+  background-color: #e1e1e1;
+}
